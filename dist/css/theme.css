@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia;
+  font-size: 1rem;
+  text-align: center;
+  color: #92969F; }
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in;
+          animation: fadeIn ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .1s;
+          animation-duration: .1s;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+svg {
+  width: 32px;
+  height: 32px; }
+
+h1 {
+  color: #363B48;
+  font-size: 1.7rem; }
+  h1 span {
+    display: block;
+    font-size: 1rem; }
+
+.main-wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.main-wrapper > aside, .main-wrapper > section {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.vertical-photo {
+  background: url("http://placehold.it/1000x1500") no-repeat center top;
+  background-size: cover;
+  height: 100vh; }
+
+.info {
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.leader > p {
+  padding: 20px;
+  font-size: 1.3rem;
+  font-style: italic; }
+
+footer {
+  min-width: 60%;
+  margin: 0 auto; }
+
+.icons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .icons a {
+    text-decoration: none;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .icons a svg {
+      fill: #363B48; }
+  .icons a:hover {
+    background-color: #00C6FF; }
+
+nav {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+  nav a {
+    text-decoration: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: width .3s;
+    transition: width .3s;
+    border-radius: 100px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #363B48; }
+    nav a svg {
+      fill: white;
+      width: 20px;
+      height: 20px;
+      -webkit-transition: fill .3s;
+      transition: fill .3s; }
+  nav a:hover {
+    background-color: #00C6FF;
+    width: 110px;
+    padding: 0 5px 0 5px; }
+    nav a:hover svg {
+      fill: #363B48; }
+    nav a:hover span {
+      font-family: sans-serif;
+      color: #363B48;
+      display: inline;
+      padding: 0 5px 0 5px; }
+
+nav:hover {
+  right: 20px; }
+
+.hr {
+  height: 2px;
+  margin: 5px;
+  background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%); }
+
+.hr.inverse {
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%); }
+
+.resume {
+  min-width: 50vw;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center; }
+
+.hidden {
+  display: none;
+  opacity: 0; }
+
+@media all and (max-width: 500px) {
+  .main-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .vertical-photo {
+    height: 180px;
+    width: 180px;
+    border-radius: 100px;
+    margin: 10px auto; }
+  h1 {
+    font-size: 1.7rem; }
+    h1 span {
+      font-size: 1.3rem; }
+  .leader p {
+    font-size: 1rem; }
+  .info {
+    padding-top: 0; } }

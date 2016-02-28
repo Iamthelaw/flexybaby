@@ -1,0 +1,51 @@
+doctype html
+head
+  meta(charset="utf-8")
+  title MyPage
+  link(rel="stylesheet", href="css/theme.css")
+body
+  //- mixins
+  mixin svg_icon(url, icon_id)
+    a(href=url)
+      svg
+        use(xlink:href=icon_id)
+  //- Inlined SVG sprites
+  .hidden
+    include ./icons/icons.svg
+  //- Print me button
+  nav
+    a(href="")
+      svg
+        use(xlink:href="#print")
+      span.hidden.fade-in Print me
+  //- Resume page
+  .resume
+    include ./resume_partial.jade
+    section
+      header
+        h1 #{resume.about.first_name}
+        p #{resume.about.address}
+      article Some staff
+        ul
+          li 1
+      footer
+        hr
+        p I am a footer
+  //- Vcard page
+  .main-wrapper    
+    aside
+      .vertical-photo
+    section.info
+      header
+        h1 Anton Alekseev
+          span junior developer
+      article.leader
+        p I am a seo, marketer, analyst & much more. I love web-crawling, statistic, modern technology and programming. Currently i am living in St Petersburg, but open to all opportunities.
+
+      footer
+        .hr
+        .icons
+          +svg_icon("", "#github")
+          +svg_icon("", "#tumblr")
+          +svg_icon("", "#linkedin")
+  script(src="js/main.js")

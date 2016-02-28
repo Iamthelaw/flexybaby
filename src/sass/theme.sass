@@ -1,0 +1,168 @@
+// Colors
+$primary-color: #92969F
+$secondary-color: #363B48
+$extra-light-grey: #BEBEBE
+$blue-link: #00C6FF
+$yellow-link: #FFD34C
+// Fonts
+//$primary-font: sans-serif
+$primary-font: Georgia
+// Font sizes
+$header-font-size: 1.7rem
+$leader-font-size: 1.3rem
+$primary-font-size: 1rem
+// Padding Margin
+$primary-padding: 20px
+$primary-element-width: 40px
+// Svg default icon size
+$svg-icon-size: 32px
+
+// Base
+*
+  margin: 0
+  padding: 0
+  font-family: $primary-font
+  font-size: $primary-font-size
+  text-align: center
+  color: $primary-color
+
+// Animations
+.fade-in
+  opacity: 0
+  animation: fadeIn ease-in
+  animation-fill-mode: forwards
+  animation-duration: .1s
+  animation-delay: .2s
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+// default svg icons size
+svg
+  width: $svg-icon-size
+  height: $svg-icon-size
+
+h1
+  color: $secondary-color
+  font-size: $header-font-size
+  span
+    display: block
+    font-size: $primary-font-size
+
+.main-wrapper
+  min-height: 100vh
+  display: flex
+
+.main-wrapper > aside, .main-wrapper > section
+  flex: 1
+
+.vertical-photo
+  background: url("http://placehold.it/1000x1500") no-repeat center top
+  background-size: cover
+  height: 100vh
+
+.info
+  padding: $primary-padding
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.leader > p
+  padding: $primary-padding
+  font-size: $leader-font-size
+  font-style: italic
+
+footer
+  min-width: 60%
+  margin: 0 auto
+
+.icons
+  display: flex
+  justify-content: center
+  a
+    text-decoration: none
+    border-radius: 100px
+    width: 50px
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    svg
+      fill: $secondary-color
+  a:hover
+    background-color: $blue-link
+
+// Navigation
+nav
+  position: absolute
+  top: 10px
+  right: 10px
+  a
+    text-decoration: none
+    display: flex
+    width: $primary-element-width
+    height: $primary-element-width
+    transition: width .3s
+    border-radius: 100px
+    justify-content: center
+    align-items: center
+    background-color: $secondary-color
+    svg
+      fill: white
+      width: 20px
+      height: 20px
+      transition: fill .3s
+  a:hover
+    background-color: $blue-link
+    width: 110px
+    padding: 0 5px 0 5px
+    svg
+      fill: $secondary-color
+    span
+      font-family: sans-serif
+      color: $secondary-color
+      display: inline
+      padding: 0 5px 0 5px
+nav:hover
+  right: 20px
+
+// Horizontal lines
+.hr
+  height: 2px
+  margin: 5px
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0) 100%)
+
+.hr.inverse
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%)
+
+// Resume
+.resume
+  min-width: 50vw
+  display: none
+  flex-direction: column
+  align-items: center
+
+.hidden
+  display: none
+  opacity: 0
+
+@media all and (max-width: 500px)
+  .main-wrapper
+    flex-direction: column
+  .vertical-photo
+    height: 180px
+    width: 180px
+    border-radius: 100px
+    margin: 10px auto
+  h1
+    font-size: $header-font-size
+    span
+      font-size: $leader-font-size
+  .leader
+    p
+      font-size: $primary-font-size
+  .info
+    padding-top: 0
